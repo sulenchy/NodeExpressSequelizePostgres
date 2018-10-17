@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel server -d ./dist",
     "start:dev": "npm run build && nodemon --watch server --exec babel-node server/app.js",
-    "lint": "eslint server/**"
+    "lint": "eslint server/**",
+    "db:migrate": "sequelize db:migrate:undo:all && sequelize db:migrate"
   },
   "repository": {
     "type": "git",
@@ -30,9 +31,14 @@
     "babel-core": "^6.26.3",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "dotenv": "^6.1.0",
     "eslint-config-airbnb": "^17.1.0",
     "express": "^4.16.4",
-    "nodemon": "^1.18.4"
+    "nodemon": "^1.18.4",
+    "pg": "^7.5.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.39.1",
+    "sequelize-cli": "^5.1.0"
   },
   "devDependencies": {
     "eslint": "^5.7.0",

@@ -1,0 +1,43 @@
+{
+  "name": "nodeexpresssequelizepostgres",
+  "version": "1.0.0",
+  "description": "Setting up Node Express Sequlize Postgres sample project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel server -d ./dist",
+    "start:dev": "npm run build && nodemon --watch server --exec babel-node server/app.js",
+    "lint": "eslint server/**"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sulenchy/NodeExpressSequelizePostgres.git"
+  },
+  "keywords": [
+    "Node",
+    "Postgres",
+    "Sequelize",
+    "Express"
+  ],
+  "author": "Sulenchy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sulenchy/NodeExpressSequelizePostgres/issues"
+  },
+  "homepage": "https://github.com/sulenchy/NodeExpressSequelizePostgres#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.4"
+  },
+  "devDependencies": {
+    "eslint": "^5.7.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1"
+  }
+}

@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel server -d ./dist",
+    "test:db": "babel-node server/config/connection.js",
     "start:dev": "npm run build && nodemon --watch server --exec babel-node server/app.js",
     "lint": "eslint server/**",
     "db:migrate": "sequelize db:migrate:undo:all && sequelize db:migrate"
